@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="40" height="40" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="background" tilewidth="32" tileheight="32">
+  <image source="dg_grounds32.png" width="288" height="608"/>
+ </tileset>
+ <tileset firstgid="172" name="meta" tilewidth="32" tileheight="32">
+  <image source="meta_tiles.png" width="67" height="34"/>
+  <tile id="0">
+   <properties>
+    <property name="Collidable" value="True"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="Collidable" value="False"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Background" width="40" height="40">
+  <properties>
+   <property name="foo" value="True"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3VMQrAIBBE0W3SeCHvf7OkUBBJNoWFX/jFIGjzmFUsEVGflJZrSN8bz3dEnz59+vTp06cvy5uPFKLvb76keP/WZvzlo3RI7C97H5TeyP1lvjqtu0Psj/7/6tOnT58+ffr0neS7AfWpYLUAGQAA
+  </data>
+ </layer>
+ <layer name="Meta" width="40" height="40">
+  <properties>
+   <property name="Collidable" value="True"/>
+   <property name="pokey" value="True"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3OoRHAMBDAsOw/S7pjWtRwkwfSnbnX+u2352qvWfw1/hp/jb/GX+Ov8df4a/w10/8+999E/hp/jb/GX+Ov8df4a/w1/pppfwfp1jc6ABkAAA==
+  </data>
+ </layer>
+</map>
