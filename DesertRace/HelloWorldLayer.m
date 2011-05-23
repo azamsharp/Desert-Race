@@ -49,29 +49,13 @@
         
         self.car = [CCSprite spriteWithFile:@"car.png"];
         self.car.position = ccp(screenSize.width/2,screenSize.height/4); 
-       // [self addChild:self.car];
-        
-        
-        self.turboFire = [[CCParticleSun alloc] init];
-        [self.turboFire setGravity:ccp(0,-90)];
-        [self.turboFire setStartSize:9];
-        [self.turboFire setEndSize:9];
-        
-        self.turboFire.position = ccp(self.car.contentSize.width/2,0);
-        
-        
-        //[self.car addChild:self.turboFire]; 
-        
+        [self addChild:self.car];
         
         // load the meta layer
-       // self.meta = [self.tiledMap layerNamed:@"Meta"];
+        self.meta = [self.tiledMap layerNamed:@"Meta"];
         
-        NSLog(@"meta layer properties %@",[self.meta propertyNamed:@"pokey"]);
-        
-       // self.meta.visible = NO;
-        
-        
-        self.y = -32; 
+        self.meta.visible = NO;
+    
         
         [self.tiledMap runAction:[CCRepeatForever actionWithAction:[CCMoveBy actionWithDuration:0.6 position:ccp(0,-32)]]];
         
@@ -93,7 +77,7 @@
         
         [self.tiledMap runAction:[CCRepeatForever actionWithAction:[CCMoveBy actionWithDuration:0.6 position:ccp(0,-32)]]];
         
-        NSLog(@"map ran out!");
+
     }
     
 }
@@ -103,10 +87,6 @@
     UITouch *touch = [touches anyObject];
     CGPoint location = [touch locationInView:[touch view]];
     location = [[CCDirector sharedDirector] convertToGL:location];
-    
-    
-    [self.turboFire setStartSize:9];
-    [self.turboFire setEndSize:9];
     
     
     CGPoint tileCoord = [self tileCoordForPosition:location];
@@ -120,11 +100,9 @@
     if (properties) {
         NSString *collision = [properties valueForKey:@"Collidable"];
         if (collision && [collision compare:@"False"] == NSOrderedSame) {
+        
             
-            // increase speed 
-            self.y -= 32; 
-            
-            [self.tiledMap runAction:[CCRepeatForever actionWithAction:[CCMoveBy actionWithDuration:0.6 position:ccp(0,self.y)]]];
+            [self.tiledMap runAction:[CCRepeatForever actionWithAction:[CCMoveBy actionWithDuration:0.6 position:ccp(0,-32)]]];
             
             
             [self.car runAction:[CCMoveTo actionWithDuration:0.6 position:ccp(location.x,self.car.position.y)]];
