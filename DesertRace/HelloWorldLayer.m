@@ -45,7 +45,7 @@
         
         CGSize screenSize = [[CCDirector sharedDirector] winSize];
         
-        self.tiledMap = [CCTMXTiledMap tiledMapWithTMXFile:@"forest.tmx"];
+        self.tiledMap = [CCTMXTiledMap tiledMapWithTMXFile:@"desert_race_map.tmx"];
         
         self.car = [CCSprite spriteWithFile:@"car.png"];
         self.car.position = ccp(screenSize.width/2,screenSize.height/4); 
@@ -64,11 +64,11 @@
         
         
         // load the meta layer
-        self.meta = [self.tiledMap layerNamed:@"Meta"];
+       // self.meta = [self.tiledMap layerNamed:@"Meta"];
         
         NSLog(@"meta layer properties %@",[self.meta propertyNamed:@"pokey"]);
         
-        self.meta.visible = NO;
+       // self.meta.visible = NO;
         
         
         self.y = -32; 

@@ -128,6 +128,7 @@
 		8D6E77FC1379D9B4000F49A2 /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D6E77FB1379D9B4000F49A2 /* car.png */; };
 		8D6E78021379E505000F49A2 /* meta_tiles.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D6E78011379E505000F49A2 /* meta_tiles.png */; };
 		8D6E78041379E601000F49A2 /* desert.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 8D6E78031379E601000F49A2 /* desert.tmx */; };
+		8DE9C7B2138B023A00D4B90F /* desert_race_map.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 8DE9C7B1138B023A00D4B90F /* desert_race_map.tmx */; };
 		8DED031F137C33750076FF8D /* forest.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 8DED031E137C33750076FF8D /* forest.tmx */; };
 		8DED0322137C358B0076FF8D /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DED0320137C358B0076FF8D /* fire.png */; };
 		8DED0323137C358B0076FF8D /* fire.pvr in Resources */ = {isa = PBXBuildFile; fileRef = 8DED0321137C358B0076FF8D /* fire.pvr */; };
@@ -373,6 +374,7 @@
 		8D6E77FB1379D9B4000F49A2 /* car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car.png; sourceTree = "<group>"; };
 		8D6E78011379E505000F49A2 /* meta_tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meta_tiles.png; sourceTree = "<group>"; };
 		8D6E78031379E601000F49A2 /* desert.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = desert.tmx; sourceTree = "<group>"; };
+		8DE9C7B1138B023A00D4B90F /* desert_race_map.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = desert_race_map.tmx; sourceTree = "<group>"; };
 		8DED031E137C33750076FF8D /* forest.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = forest.tmx; sourceTree = "<group>"; };
 		8DED0320137C358B0076FF8D /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
 		8DED0321137C358B0076FF8D /* fire.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire.pvr; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 		8D6E76991379C5C3000F49A2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8DE9C7B1138B023A00D4B90F /* desert_race_map.tmx */,
 				8DED0320137C358B0076FF8D /* fire.png */,
 				8DED0321137C358B0076FF8D /* fire.pvr */,
 				8DED031E137C33750076FF8D /* forest.tmx */,
@@ -793,6 +796,7 @@
 				8DED031F137C33750076FF8D /* forest.tmx in Resources */,
 				8DED0322137C358B0076FF8D /* fire.png in Resources */,
 				8DED0323137C358B0076FF8D /* fire.pvr in Resources */,
+				8DE9C7B2138B023A00D4B90F /* desert_race_map.tmx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

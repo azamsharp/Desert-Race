@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="40" height="40" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="dg_grounds32" tilewidth="32" tileheight="32">
+  <image source="dg_grounds32.png" width="288" height="608"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="40" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+2WMQrAMAwDvXT0t/K/TvlulxZCKaZL4hPxoDmHHMl2M/Nbx0sOE5Wvw/ki/xqAiz7fxyMqX+RfX/i+6nyj/BLyodwvJFH5lPuFkA/6fItvLl/2H1TOL0HRfiPcL3Q+8nzHbH7xnQBGsn9/+LL7r+7TeXyEfqn9tjdfdr+o+5etKL+1f4tvZ13K4ieNABkAAA==
+  </data>
+ </layer>
+</map>
