@@ -50,14 +50,46 @@
 
 -(void) hit
 {
+
     self.currentHealth -= 25; 
     
-    if(self.currentHealth <= 25) 
+    if(self.currentHealth == 0) 
+    {
+        [self destroy];
+    }
+    
+    else if(self.currentHealth <= 25) 
     {
         [healthBar.progressTimer setSprite:[CCSprite spriteWithFile:@"red_health_bar.png"]];
+        
+        [self enableSmoke];
+        
     }
     
     [healthBar.progressTimer setPercentage:_100_PERCENT * (self.currentHealth/self.maxHealth)];
+}
+
+-(void) destroy 
+{
+    CCParticleFire *fire = [[CCParticleFire alloc] init];
+    [fire setAutoRemoveOnFinish:YES];
+    [fire setTotalParticles:70];
+    fire.position = self.sprite.position; 
+    [self.layer addChild:fire z:1];
+    
+    }
+
+-(void) enableSmoke 
+{
+    CCParticleSmoke *smoke = [[CCParticleSmoke alloc] init];
+    [smoke setAutoRemoveOnFinish:YES]; 
+    [smoke setScaleX:0.8];
+    [smoke setStartSize:10];
+    [smoke setEndSize:10];
+    [smoke setGravity:ccp(0,-90)];
+    [smoke setTotalParticles:50];
+    smoke.position = ccp(self.sprite.contentSize.width/2,0);
+    [self.sprite addChild:smoke];
 }
 
 -(void) applyEnergizeEffect 

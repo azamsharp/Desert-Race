@@ -26,6 +26,8 @@
 -(void) hit; 
 -(void) energize; 
 -(void) drainFuel;
+-(void) enableSmoke; 
+-(void) destroy; 
 
 @property (nonatomic,retain) CCSprite *sprite; 
 @property (nonatomic,assign) float currentHealth; 

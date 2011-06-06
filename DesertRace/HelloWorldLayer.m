@@ -45,8 +45,14 @@
     + smallNumber;
 }
 
--(void) addFlaresToRoad
+-(void) addFlaresToRoad:(ccTime) dt 
 {
+    // clean the array 
+    [self.flares removeAllObjects];
+    self.flares = nil; 
+    
+    self.flares = [[NSMutableArray alloc] init];
+    
     [self populateRandomFlares];
     int y = 200; 
     int x = 0; 
@@ -125,24 +131,24 @@
         self.meta = [self.tiledMap layerNamed:@"Meta"];
         
         self.meta.visible = NO;
-    
-        [self addFlaresToRoad];
-       // [self addHealthBarToCar];
-        
+  
         [self.tiledMap runAction:[CCRepeatForever actionWithAction:[CCMoveBy actionWithDuration:0.6 position:ccp(0,-32)]]];
         
-        [self addChild:self.tiledMap z:-1];	
+        [self addFlaresToRoad:0.05f]; 
+        
+        [self addChild:self.tiledMap z:-1 tag:102];	
         
        [self schedule: @selector(step:)];
         
-        [self schedule:@selector(checkCarCollisionWithFlare:)];
+       [self schedule:@selector(checkCarCollisionWithFlare:)];
+       
+       [self schedule:@selector(addFlaresToRoad:) interval:10.0];
+    
         
     }
     
 	return self;
 }
-
-
 
 -(void) checkCarCollisionWithFlare:(ccTime) dt 
 {
@@ -161,7 +167,6 @@
             if(flare.isRed) 
             {
                 [self.car hit];
-                
             }
             else 
             {
@@ -175,9 +180,6 @@
 
 -(void) step:(ccTime) dt
 {
-    
-    // add flares to the road 
-   // [self addFlaresToRoad];
     
     if(self.tiledMap.position.y < -800) 
     {

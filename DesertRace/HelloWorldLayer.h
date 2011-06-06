@@ -13,6 +13,7 @@
 #import "HealthBar.h"
 #import "Car.h"
 
+
 // HelloWorldLayer
 @interface HelloWorldLayer : CCLayer
 {
@@ -31,7 +32,7 @@
 
 // returns a CCScene that contains the HelloWorldLayer as the only child
 +(CCScene *) scene;
--(void) addFlaresToRoad; 
+-(void) addFlaresToRoad:(ccTime) dt; 
 -(void) addHealthBarToCar; 
 -(void) populateRandomFlares; 
 -(CCParticleSun *) getFlareByTextureImage:(NSString *) n; 
@@ -41,7 +42,6 @@
 @property (nonatomic,retain) Car *car; 
 @property (nonatomic,retain) CCTMXLayer *meta; 
 @property (nonatomic,retain) CCParticleSun *turboFire; 
-
 @property (nonatomic,retain) NSMutableArray *flares; 
 
 @end
