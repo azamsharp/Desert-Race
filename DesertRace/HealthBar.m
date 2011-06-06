@@ -1,8 +1,8 @@
 //
 //  HealthBar.m
-//  DesertRace
+//  MathCar
 //
-//  Created by Mohammad Azam on 6/6/11.
+//  Created by Mohammad Azam on 5/24/11.
 //  Copyright 2011 HighOnCoding. All rights reserved.
 //
 
@@ -10,5 +10,24 @@
 
 
 @implementation HealthBar
+
+@synthesize sprite,progressTimer; 
+
+-(id) initWithProgressTimerSprite:(NSString *)img
+{
+    self = [super init]; 
+    //  self.sprite = [CCSprite spriteWithFile:img];
+    self.progressTimer = [CCProgressTimer progressWithFile:img];
+    self.progressTimer.type = kCCProgressTimerTypeHorizontalBarLR;
+    self.progressTimer.percentage = 100;
+    
+    
+    return self; 
+}
+
+-(void) update
+{
+    
+}
 
 @end

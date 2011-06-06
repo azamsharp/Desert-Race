@@ -11,4 +11,8 @@
 
 @implementation Flare
 
+@synthesize flareParticle,isCollided,isRed; 
+
+
+
 @end

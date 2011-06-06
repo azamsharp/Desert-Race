@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D2F94B9138BFA0A00A307A4 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F94B8138BFA0A00A307A4 /* green.png */; };
+		8D2F94BC138BFA0F00A307A4 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F94BB138BFA0F00A307A4 /* red.png */; };
 		8D6E76891379C5C3000F49A2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6E76881379C5C3000F49A2 /* QuartzCore.framework */; };
 		8D6E768B1379C5C3000F49A2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6E768A1379C5C3000F49A2 /* OpenGLES.framework */; };
 		8D6E768D1379C5C3000F49A2 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6E768C1379C5C3000F49A2 /* OpenAL.framework */; };
@@ -128,7 +130,12 @@
 		8D6E77FC1379D9B4000F49A2 /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D6E77FB1379D9B4000F49A2 /* car.png */; };
 		8D6E78021379E505000F49A2 /* meta_tiles.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D6E78011379E505000F49A2 /* meta_tiles.png */; };
 		8D6E78041379E601000F49A2 /* desert.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 8D6E78031379E601000F49A2 /* desert.tmx */; };
+		8DD09BC9139D28C000EB9395 /* HealthBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD09BC8139D28BF00EB9395 /* HealthBar.m */; };
+		8DD09BCD139D2A0300EB9395 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD09BCC139D2A0300EB9395 /* Car.m */; };
 		8DE9C7B2138B023A00D4B90F /* desert_race_map.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 8DE9C7B1138B023A00D4B90F /* desert_race_map.tmx */; };
+		8DEBABC2139AE66800958FAA /* green_health_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DEBABC1139AE66800958FAA /* green_health_bar.png */; };
+		8DEBABC5139AE67400958FAA /* red_health_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DEBABC4139AE67400958FAA /* red_health_bar.png */; };
+		8DEBABD0139B044400958FAA /* Flare.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBABCF139B044300958FAA /* Flare.m */; };
 		8DED031F137C33750076FF8D /* forest.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 8DED031E137C33750076FF8D /* forest.tmx */; };
 		8DED0322137C358B0076FF8D /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DED0320137C358B0076FF8D /* fire.png */; };
 		8DED0323137C358B0076FF8D /* fire.pvr in Resources */ = {isa = PBXBuildFile; fileRef = 8DED0321137C358B0076FF8D /* fire.pvr */; };
@@ -136,6 +143,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D2F94B8138BFA0A00A307A4 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
+		8D2F94BB138BFA0F00A307A4 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
 		8D6E76841379C5C3000F49A2 /* DesertRace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesertRace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D6E76881379C5C3000F49A2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8D6E768A1379C5C3000F49A2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -374,7 +383,15 @@
 		8D6E77FB1379D9B4000F49A2 /* car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car.png; sourceTree = "<group>"; };
 		8D6E78011379E505000F49A2 /* meta_tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meta_tiles.png; sourceTree = "<group>"; };
 		8D6E78031379E601000F49A2 /* desert.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = desert.tmx; sourceTree = "<group>"; };
+		8DD09BC7139D28BF00EB9395 /* HealthBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthBar.h; sourceTree = "<group>"; };
+		8DD09BC8139D28BF00EB9395 /* HealthBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthBar.m; sourceTree = "<group>"; };
+		8DD09BCB139D2A0300EB9395 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		8DD09BCC139D2A0300EB9395 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 		8DE9C7B1138B023A00D4B90F /* desert_race_map.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = desert_race_map.tmx; sourceTree = "<group>"; };
+		8DEBABC1139AE66800958FAA /* green_health_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_health_bar.png; sourceTree = "<group>"; };
+		8DEBABC4139AE67400958FAA /* red_health_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_health_bar.png; sourceTree = "<group>"; };
+		8DEBABCE139B044300958FAA /* Flare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flare.h; sourceTree = "<group>"; };
+		8DEBABCF139B044300958FAA /* Flare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flare.m; sourceTree = "<group>"; };
 		8DED031E137C33750076FF8D /* forest.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = forest.tmx; sourceTree = "<group>"; };
 		8DED0320137C358B0076FF8D /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
 		8DED0321137C358B0076FF8D /* fire.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire.pvr; sourceTree = "<group>"; };
@@ -435,13 +452,19 @@
 		8D6E76981379C5C3000F49A2 /* DesertRace */ = {
 			isa = PBXGroup;
 			children = (
+				8DD09BC7139D28BF00EB9395 /* HealthBar.h */,
+				8DD09BC8139D28BF00EB9395 /* HealthBar.m */,
 				8D6E77E41379C5C6000F49A2 /* AppDelegate.h */,
 				8D6E77E51379C5C6000F49A2 /* AppDelegate.m */,
 				8D6E77E71379C5C6000F49A2 /* RootViewController.h */,
 				8D6E77E81379C5C6000F49A2 /* RootViewController.m */,
 				8D6E77EA1379C5C6000F49A2 /* HelloWorldLayer.h */,
 				8D6E77EB1379C5C6000F49A2 /* HelloWorldLayer.m */,
+				8DEBABCE139B044300958FAA /* Flare.h */,
+				8DEBABCF139B044300958FAA /* Flare.m */,
 				8D6E77ED1379C5C6000F49A2 /* GameConfig.h */,
+				8DD09BCB139D2A0300EB9395 /* Car.h */,
+				8DD09BCC139D2A0300EB9395 /* Car.m */,
 				8D6E76991379C5C3000F49A2 /* Resources */,
 				8D6E76AD1379C5C3000F49A2 /* cocos2d */,
 				8D6E779E1379C5C5000F49A2 /* CocosDenshion */,
@@ -456,6 +479,10 @@
 		8D6E76991379C5C3000F49A2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8DEBABC4139AE67400958FAA /* red_health_bar.png */,
+				8DEBABC1139AE66800958FAA /* green_health_bar.png */,
+				8D2F94BB138BFA0F00A307A4 /* red.png */,
+				8D2F94B8138BFA0A00A307A4 /* green.png */,
 				8DE9C7B1138B023A00D4B90F /* desert_race_map.tmx */,
 				8DED0320137C358B0076FF8D /* fire.png */,
 				8DED0321137C358B0076FF8D /* fire.pvr */,
@@ -797,6 +824,10 @@
 				8DED0322137C358B0076FF8D /* fire.png in Resources */,
 				8DED0323137C358B0076FF8D /* fire.pvr in Resources */,
 				8DE9C7B2138B023A00D4B90F /* desert_race_map.tmx in Resources */,
+				8D2F94B9138BFA0A00A307A4 /* green.png in Resources */,
+				8D2F94BC138BFA0F00A307A4 /* red.png in Resources */,
+				8DEBABC2139AE66800958FAA /* green_health_bar.png in Resources */,
+				8DEBABC5139AE67400958FAA /* red_health_bar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -907,6 +938,9 @@
 				8D6E77E61379C5C6000F49A2 /* AppDelegate.m in Sources */,
 				8D6E77E91379C5C6000F49A2 /* RootViewController.m in Sources */,
 				8D6E77EC1379C5C6000F49A2 /* HelloWorldLayer.m in Sources */,
+				8DEBABD0139B044400958FAA /* Flare.m in Sources */,
+				8DD09BC9139D28C000EB9395 /* HealthBar.m in Sources */,
+				8DD09BCD139D2A0300EB9395 /* Car.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
