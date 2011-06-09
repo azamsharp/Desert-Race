@@ -16,7 +16,7 @@
 -(id) initWithProgressTimerSprite:(NSString *)img
 {
     self = [super init]; 
-    //  self.sprite = [CCSprite spriteWithFile:img];
+
     self.progressTimer = [CCProgressTimer progressWithFile:img];
     self.progressTimer.type = kCCProgressTimerTypeHorizontalBarLR;
     self.progressTimer.percentage = 100;

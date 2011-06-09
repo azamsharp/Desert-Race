@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		8D2F94B9138BFA0A00A307A4 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F94B8138BFA0A00A307A4 /* green.png */; };
 		8D2F94BC138BFA0F00A307A4 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F94BB138BFA0F00A307A4 /* red.png */; };
+		8D5FE79113A14121005CC854 /* HomeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5FE79013A14120005CC854 /* HomeLayer.m */; };
+		8D5FE79413A143B2005CC854 /* desert_race_home_menu_map.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 8D5FE79313A143B2005CC854 /* desert_race_home_menu_map.tmx */; };
+		8D5FE79713A145B7005CC854 /* desert_race_main_title_font.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5FE79513A145B7005CC854 /* desert_race_main_title_font.png */; };
+		8D5FE79813A145B7005CC854 /* desert_race_main_title_font.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 8D5FE79613A145B7005CC854 /* desert_race_main_title_font.fnt */; };
+		8D5FE79B13A1480B005CC854 /* desert_race_menu_font.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5FE79913A1480B005CC854 /* desert_race_menu_font.png */; };
+		8D5FE79C13A1480B005CC854 /* desert_race_menu_font.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 8D5FE79A13A1480B005CC854 /* desert_race_menu_font.fnt */; };
+		8D5FE79E13A155F6005CC854 /* sand.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5FE79D13A155F6005CC854 /* sand.png */; };
 		8D6E76891379C5C3000F49A2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6E76881379C5C3000F49A2 /* QuartzCore.framework */; };
 		8D6E768B1379C5C3000F49A2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6E768A1379C5C3000F49A2 /* OpenGLES.framework */; };
 		8D6E768D1379C5C3000F49A2 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6E768C1379C5C3000F49A2 /* OpenAL.framework */; };
@@ -145,6 +152,14 @@
 /* Begin PBXFileReference section */
 		8D2F94B8138BFA0A00A307A4 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
 		8D2F94BB138BFA0F00A307A4 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
+		8D5FE78F13A14120005CC854 /* HomeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeLayer.h; sourceTree = "<group>"; };
+		8D5FE79013A14120005CC854 /* HomeLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeLayer.m; sourceTree = "<group>"; };
+		8D5FE79313A143B2005CC854 /* desert_race_home_menu_map.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = desert_race_home_menu_map.tmx; sourceTree = "<group>"; };
+		8D5FE79513A145B7005CC854 /* desert_race_main_title_font.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desert_race_main_title_font.png; sourceTree = "<group>"; };
+		8D5FE79613A145B7005CC854 /* desert_race_main_title_font.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = desert_race_main_title_font.fnt; sourceTree = "<group>"; };
+		8D5FE79913A1480B005CC854 /* desert_race_menu_font.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desert_race_menu_font.png; sourceTree = "<group>"; };
+		8D5FE79A13A1480B005CC854 /* desert_race_menu_font.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = desert_race_menu_font.fnt; sourceTree = "<group>"; };
+		8D5FE79D13A155F6005CC854 /* sand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sand.png; sourceTree = "<group>"; };
 		8D6E76841379C5C3000F49A2 /* DesertRace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesertRace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D6E76881379C5C3000F49A2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8D6E768A1379C5C3000F49A2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -452,6 +467,8 @@
 		8D6E76981379C5C3000F49A2 /* DesertRace */ = {
 			isa = PBXGroup;
 			children = (
+				8D5FE78F13A14120005CC854 /* HomeLayer.h */,
+				8D5FE79013A14120005CC854 /* HomeLayer.m */,
 				8DD09BC7139D28BF00EB9395 /* HealthBar.h */,
 				8DD09BC8139D28BF00EB9395 /* HealthBar.m */,
 				8D6E77E41379C5C6000F49A2 /* AppDelegate.h */,
@@ -479,6 +496,12 @@
 		8D6E76991379C5C3000F49A2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8D5FE79D13A155F6005CC854 /* sand.png */,
+				8D5FE79913A1480B005CC854 /* desert_race_menu_font.png */,
+				8D5FE79A13A1480B005CC854 /* desert_race_menu_font.fnt */,
+				8D5FE79513A145B7005CC854 /* desert_race_main_title_font.png */,
+				8D5FE79613A145B7005CC854 /* desert_race_main_title_font.fnt */,
+				8D5FE79313A143B2005CC854 /* desert_race_home_menu_map.tmx */,
 				8DEBABC4139AE67400958FAA /* red_health_bar.png */,
 				8DEBABC1139AE66800958FAA /* green_health_bar.png */,
 				8D2F94BB138BFA0F00A307A4 /* red.png */,
@@ -828,6 +851,12 @@
 				8D2F94BC138BFA0F00A307A4 /* red.png in Resources */,
 				8DEBABC2139AE66800958FAA /* green_health_bar.png in Resources */,
 				8DEBABC5139AE67400958FAA /* red_health_bar.png in Resources */,
+				8D5FE79413A143B2005CC854 /* desert_race_home_menu_map.tmx in Resources */,
+				8D5FE79713A145B7005CC854 /* desert_race_main_title_font.png in Resources */,
+				8D5FE79813A145B7005CC854 /* desert_race_main_title_font.fnt in Resources */,
+				8D5FE79B13A1480B005CC854 /* desert_race_menu_font.png in Resources */,
+				8D5FE79C13A1480B005CC854 /* desert_race_menu_font.fnt in Resources */,
+				8D5FE79E13A155F6005CC854 /* sand.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -941,6 +970,7 @@
 				8DEBABD0139B044400958FAA /* Flare.m in Sources */,
 				8DD09BC9139D28C000EB9395 /* HealthBar.m in Sources */,
 				8DD09BCD139D2A0300EB9395 /* Car.m in Sources */,
+				8D5FE79113A14121005CC854 /* HomeLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

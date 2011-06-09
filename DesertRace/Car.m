@@ -53,12 +53,8 @@
 
     self.currentHealth -= 25; 
     
-    if(self.currentHealth == 0) 
-    {
-        [self destroy];
-    }
     
-    else if(self.currentHealth <= 25) 
+    if(self.currentHealth <= 25) 
     {
         [healthBar.progressTimer setSprite:[CCSprite spriteWithFile:@"red_health_bar.png"]];
         

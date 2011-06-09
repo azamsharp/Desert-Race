@@ -16,7 +16,7 @@
     BOOL isRed; 
 }
 
--(id) initWithSpriteImage:(NSString *) img; 
+
 
 
 @property (nonatomic,retain) CCParticleSun *flareParticle; 
