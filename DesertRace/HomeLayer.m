@@ -42,7 +42,7 @@
         
         [self loadMap];
         [self loadMenu];
-       // [self loadSandStorm];
+        [self loadSandStorm];
     
     }
     
@@ -72,8 +72,9 @@
 
 -(void) loadSandStorm
 {
-    CCParticleRain *sandStorm = [[CCParticleRain alloc] init];
-    sandStorm.texture = [[CCTextureCache sharedTextureCache] addImage:@"sand.png"];
+    CCParticleFireworks *sandStorm = [[CCParticleFireworks alloc] init];
+    sandStorm.position = ccp(windowSize.width/2,windowSize.height); 
+    [sandStorm setBlendAdditive:YES];
     [self addChild:sandStorm];
 }
 
