@@ -24,10 +24,21 @@
 }
 
 
+-(void) preloadAndPlayMusic
+{
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"DesertRace_22050Hz_Loop.wav"];
+    
+    [[SimpleAudioEngine sharedEngine] playEffect:@"DesertRace_22050Hz_Loop.wav"];
+    
+}
+
 -(id) init 
 {
     if((self=[super init])) {
     
+        // preload and play music 
+        [self preloadAndPlayMusic];
+        
         isTouchEnabled_ = YES; 
         windowSize = [[CCDirector sharedDirector] winSize];
         
