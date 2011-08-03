@@ -114,6 +114,9 @@
 	if( (self=[super init])) {
 		
         isTouchEnabled_  = YES; 
+        isAccelerometerEnabled_ = YES; 
+       
+        [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:0.5];
         
         windowSize = [[CCDirector sharedDirector] winSize];
         
@@ -191,36 +194,86 @@
     
 }
 
+-(void) accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration
+{
+	static float prevX = 5, prevY = 0; 
+    
+#define kFilterFactor 0.05f;
+	int movementSpeed = 100; 
+    
+	float accelX = (float) acceleration.x * kFilterFactor + (1- 0.05f) *prevX; 
+    
+	prevX = accelX; 
+	float aspeed = -250 * -accelX;
+    
+	if(car) 
+	{
+        
+		if(aspeed > movementSpeed)
+			aspeed = movementSpeed; 
+		else if(aspeed < -movementSpeed) 
+			aspeed = -movementSpeed; 
+        
+        
+        if([self isCarOnRoad:ccp(car.sprite.position.x + aspeed,car.sprite.position.y)]) 
+            [car.sprite setPosition:ccp(car.sprite.position.x + aspeed, car.sprite.position.y)];
+        
+	}
+    
+    if((accelX > 0 || car.sprite.position.x > car.sprite.textureRect.size.width/2) 
+       && (accelX < 0 || car.sprite.position.x < 320 - car.sprite.textureRect.size.width /2))
+        
+    {
+        if([self isCarOnRoad:ccp(car.sprite.position.x + aspeed,car.sprite.position.y)]) 
+            [car.sprite setPosition:ccp(car.sprite.position.x + aspeed, car.sprite.position.y)];
+    }
+}
+
+-(BOOL) isCarOnRoad:(CGPoint) location 
+{
+    BOOL onRoad = FALSE; 
+    
+    CGPoint tileCoord = [self tileCoordForPosition:location]; 
+    
+    int tileGid = [meta tileGIDAt:tileCoord];
+    
+    NSDictionary *properties = [tiledMap propertiesForGID:tileGid];
+    
+    if (properties) {
+        NSString *collision = [properties valueForKey:@"Collidable"];
+        if (collision && [collision compare:@"False"] == NSOrderedSame) {
+            
+            onRoad = TRUE;    
+        }
+    }
+    
+    return onRoad; 
+}
+
 -(void) ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = [touches anyObject];
     CGPoint location = [touch locationInView:[touch view]];
     location = [[CCDirector sharedDirector] convertToGL:location];
     
-    
-    CGPoint tileCoord = [self tileCoordForPosition:location];
-    
-    int tileGid = [self.meta tileGIDAt:tileCoord];
-    
-    
-    NSDictionary *properties = [self.tiledMap propertiesForGID:tileGid];
-    
-    
-    if (properties) {
-        NSString *collision = [properties valueForKey:@"Collidable"];
-        if (collision && [collision compare:@"False"] == NSOrderedSame) {
-        
-            
-            [self.tiledMap runAction:[CCRepeatForever actionWithAction:[CCMoveBy actionWithDuration:0.6 position:ccp(0,-32)]]];
-            
-            
-            [self.car.sprite runAction:[CCMoveTo actionWithDuration:0.6 position:ccp(location.x,self.car.sprite.position.y)]];
-            
-        }
-    }
-    
+    [self pauseGame]; 
 }
 
+-(void) pauseGame
+{
+    BOOL isPaused = [[CCDirector sharedDirector] isPaused];
+    
+    if(!isPaused) 
+    {
+        [UIAccelerometer sharedAccelerometer].delegate = nil; 
+        
+        [[SimpleAudioEngine sharedEngine] playEffect:@"zigzag.aif"];
+        PauseLayer *pauseLayer = [[PauseLayer alloc] init];
+        [pauseLayer setGameLayer:self];
+        [self addChild:pauseLayer z:10 tag:101]; 
+        
+    }
+}
 
 - (void) dealloc
 {

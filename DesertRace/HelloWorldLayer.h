@@ -12,6 +12,7 @@
 #import "Flare.h"
 #import "HealthBar.h"
 #import "Car.h"
+#import "PauseLayer.h" 
 
 
 // HelloWorldLayer
@@ -27,7 +28,6 @@
     NSMutableArray *flares; 
     int randomNumber; 
     CGSize windowSize; 
-
 }
 
 // returns a CCScene that contains the HelloWorldLayer as the only child
@@ -36,6 +36,7 @@
 -(void) addHealthBarToCar; 
 -(void) populateRandomFlares; 
 -(CCParticleSun *) getFlareByTextureImage:(NSString *) n; 
+-(void) pauseGame; 
 
 
 @property (nonatomic,retain) CCTMXTiledMap *tiledMap;

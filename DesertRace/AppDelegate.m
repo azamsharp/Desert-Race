@@ -109,6 +109,9 @@
 	
 	// Removes the startup flicker
 	[self removeStartupFlicker];
+    
+    [[CCDirector sharedDirector] setProjection:CCDirectorProjection2D];
+    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
 	
 	// Run the intro Scene
 	[[CCDirector sharedDirector] runWithScene: [HomeLayer scene]];

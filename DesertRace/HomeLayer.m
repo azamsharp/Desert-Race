@@ -27,7 +27,6 @@
 -(void) preloadAndPlayMusic
 {
     [[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:@"DesertRace_22050Hz_Loop.wav"];
-    
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"DesertRace_22050Hz_Loop.wav" loop:YES];
     
 }
